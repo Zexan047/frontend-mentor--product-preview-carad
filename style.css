@@ -45,12 +45,12 @@
 *,
 *::before,
 *::after {
-     /* Allgemeiner Reset */
+     /* General Reset */
      padding: 0;
      margin: 0;
      box-sizing: border-box;
      /* scroll-behavior: smooth;  */
-     /* auskommentiert, da keine Animationen/Scrolling vorhanden */
+     /* commented out, since no scrolling on the project */
 }
 
 body {
