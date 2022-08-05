@@ -1,0 +1,187 @@
+:root {
+     /* === General Variables === */
+
+     /* General Color Variables */
+     --primary-accent-clr: hsl(158, 36%, 37%);
+     --secondary-accent-clr: hsl(158, 36%, 21%);
+     --primary-copy-clr: hsl(228, 12%, 48%);
+     --bg-clr: hsl(30, 38%, 92%);
+     --card-bg-clr: hsl(0, 0%, 100%);
+     --primary-shadow: 4px 4px 20px rgb(105, 105, 105);
+
+     /* General Fonts Variables */
+     --sans-serif-ff: "Montserrat", sans-serif;
+     --serif-ff: "Fraunces", serif;
+     --fw-normal: 500;
+     --fw-bold: 700;
+
+     /* === Specific Element Variables === */
+
+     /* Body Copy Variables */
+     --copy-clr: var(--primary-copy-clr);
+     --copy-fs: .875rem;
+     --copy-ff: var(--sans-serif-ff);
+     --copy-fw: var(--fw-normal);
+
+     /* Title Variables */
+     --title-clr: hsl(212, 21%, 14%);
+     --title-fs: 2rem;
+     --title-ff: var(--serif-ff);
+     --title-fw: var(--fw-bold);
+
+     /* Subtitle Variables */
+     --subtitle-clr: var(--primary-copy-clr);
+     --subtitle-fs: 0.875rem;
+     --subtitle-ff: var(--sans-serif-ff);
+     --subtitle-fw: var(--fw-normal);
+
+     /* Price Variables */
+     --price-clr: var(--primary-accent-clr);
+     --price-fs: 2rem;
+     --price-ff: var(--serif-ff);
+     --price-fw: var(--fw-bold);
+}
+
+*,
+*::before,
+*::after {
+     /* Allgemeiner Reset */
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     /* scroll-behavior: smooth;  */
+     /* auskommentiert, da keine Animationen/Scrolling vorhanden */
+}
+
+body {
+     width: 100vw;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: var(--copy-clr);
+     font-family: var(--copy-ff);
+     font-size: var(--copy-fs);
+     background-color: var(--bg-clr);
+}
+
+main {
+     max-width: 335px;
+     display: flex;
+     flex-direction: column;
+     background-color: var(--card-bg-clr);
+     border-radius: 0.5rem;
+     box-shadow: var(--primary-shadow);
+}
+
+/* == Image Styling == */
+
+img {
+     width: 100%;
+
+}
+
+.image-desktop {
+     display: none;
+     border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.image-mobile {
+     border-radius: 0.5rem 0.5rem 0 0;
+}
+
+/* == Content Styling == */
+
+.content-container {
+     margin: 1.5rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+}
+
+.subtitle {
+     margin-bottom: 0.75rem;
+     text-transform: uppercase;
+     letter-spacing: 0.25rem;
+}
+
+.title {
+     margin-bottom: 1rem;
+     color: var(--title-clr);
+     font-family: var(--title-ff);
+     font-size: var(--title-fs);
+     font-weight: var(--title-fw);
+     line-height: 1;
+}
+
+.description {
+     margin-bottom: 1.25rem;
+     line-height: 1.5;
+}
+
+/* Price Styling */
+
+.price-container {
+     margin-bottom: 1rem;
+     display: flex;
+     align-items: center;
+}
+
+.main-price {
+     margin-right: 1.5rem;
+     color: var(--price-clr);
+     font-family: var(--price-ff);
+     font-size: var(--price-fs);
+     font-weight: var(--price-fw);
+}
+
+.old-price {
+     text-decoration: line-through;
+}
+
+/* Button Styling */
+
+.cta-button {
+     padding: 0.75rem 0;
+     display: flex;
+     justify-content: center;
+     color: white;
+     font-weight: var(--fw-bold);
+     background-color: var(--primary-accent-clr);
+     border: none;
+     border-radius: 0.5rem;
+     cursor: pointer;
+}
+
+.cta-button:hover {
+     transition: 0.2s ease-in-out;
+     background-color: var(--secondary-accent-clr);
+}
+
+.cartIcon {
+     margin-right: 0.75rem;
+}
+
+@media only screen and (min-width: 600px) {
+     main {
+          max-width: none;
+          flex-direction: row;
+     }
+
+     .image-container {
+          max-width: 300px;
+     }
+
+     .image-mobile {
+          display: none;
+     }
+
+     .image-desktop {
+          display: block;
+     }
+
+     .content-container {
+          max-width: 220px;
+          margin: 0 2rem;
+     }
+}
